@@ -29,11 +29,13 @@ namespace WebApplicationTest.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            // =========================================================================================================
             var ar = new object[60];
             for (var i = 0; i < 60; i++)
             {
                 ar[i] = new byte[85000];
             }
+            // =========================================================================================================
 
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
